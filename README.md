@@ -1,2 +1,3 @@
 # ballista-website
-Ballista web site
+
+This repo contains the source for the https://ballistacompute.org/ web site.
