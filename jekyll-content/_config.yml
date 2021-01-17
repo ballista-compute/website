@@ -1,0 +1,22 @@
+# Setup
+title:               Ballista
+tagline:             'A modern distributed compute platform'
+description:         'Ballista is a modern distributed compute platform based on Apache Arrow.'
+url:                 https://ballistacompute.org
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Andy Grove
+  url:               https://andygrove.io
+  email:             andygrove73@gmail.com
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: UA-42727569-9

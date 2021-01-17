@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Welcome to the new Ballista website!"
+date:   2020-04-26 11:10:06 -0600
+categories: news
+---
+
+Ballista is an attempt at building a distributed compute platform based on [Apache Arrow](https://arrow.apache.org/) and this site has been created to host the [user guide](/docs) and to provide a blog to announce project news and [releases](/releases).
