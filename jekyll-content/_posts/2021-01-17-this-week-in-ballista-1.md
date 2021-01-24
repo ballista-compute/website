@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "This week in Ballista #1"
+title:  "This Week in Ballista #1"
 date:   2021-01-17 10:00:00 -0700
 categories: thisweek
 ---
 
-Welcome to the first edition of "This week in Ballista", a weekly newsletter that summarizes activity in the 
+Welcome to the first edition of "This Week in Ballista", a weekly newsletter that summarizes activity in the 
 [Ballista Distributed Compute](https://github.com/ballista-compute/ballista) project.
 
 Ballista is a modern distributed compute platform based on [Apache Arrow](https://arrow.apache.org/) and primarily 
