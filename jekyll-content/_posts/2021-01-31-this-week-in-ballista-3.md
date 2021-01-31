@@ -21,7 +21,6 @@ There are now separate `scheduler` and `executor` binaries, with support for the
   primarily intended for local development testing.
 - Standalone Mode: Executors connect to the scheduler process
 - Etcd Mode: Executors connect to the scheduler process and the scheduler uses etcd for discover
-- Kubernetes Mode: Executors connect to the scheduler process and the scheduler uses Kubernetes for discover
 
 Thanks `@edrevo` for taking the lead on this work.
 
