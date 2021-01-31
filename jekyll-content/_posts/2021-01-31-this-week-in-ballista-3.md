@@ -20,7 +20,7 @@ There are now separate `scheduler` and `executor` binaries, with support for the
 - Local Mode: Single process containing scheduler and executor. This is the simplest way to run Ballista and is 
   primarily intended for local development testing.
 - Standalone Mode: Executors connect to the scheduler process
-- Etcd Mode: Executors connect to the scheduler process and the scheduler uses etcd for discover
+- Etcd Mode: Executors connect to the scheduler process and the scheduler uses etcd for state management
 
 Thanks `@edrevo` for taking the lead on this work.
 
