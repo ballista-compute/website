@@ -48,6 +48,12 @@ the changes in 0.4.0 ([#486](https://github.com/ballista-compute/ballista/issues
 At the current rate of progress, it is very likely that there will be a 0.4.0 alpha release before the end of the 
 month and at this point it will be easier to have more contributors working on different areas of the project.
 
+## Follow @BallistaCompute
+
+There is now a [@BallistaCompute](https://twitter.com/BallistaCompute) Twitter account. Follow this account to receive 
+notifications when "This Week in Ballista" is posted each week. Eventually there will be an RSS feed and support for
+email notifications as well.
+
 ## Help Wanted
 
 There has been an effort to start cleaning up the GitHub issues and more issues are now labeled with 
