@@ -31,14 +31,15 @@ from each partition is streamed to disk on the executor in Arrow IPC format. Fut
 results using a [ShuffleReaderExec](https://github.com/ballista-compute/ballista/blob/main/rust/ballista/src/executor/shuffle_reader.rs)
 operator.
 
-Finally, a [CollectExec]() operator can be executed to retrieve the final result partitions in the client and 
-coalesce them into a single partition.
+Finally, a [CollectExec](https://github.com/ballista-compute/ballista/blob/main/rust/ballista/src/executor/collect.rs) 
+operator can be executed to retrieve the final result partitions in the client and coalesce them into a single partition.
 
 All of these pieces work and now the following work needs to happen to make this fully usable:
 
 - The scheduler already has the ability to receive a logical plan and execute a distributed query using the available
 executors in the cluster, and the Ballista `DataFrame::collect` method now needs to be updated to use this mechanism 
-instead of sending the logical plan to one executor to be executed in-process with DataFusion ([#485](https://github.com/ballista-compute/ballista/issues/485)).
+instead of sending the logical plan to one executor to be executed in-process with DataFusion 
+  ([#485](https://github.com/ballista-compute/ballista/issues/485)).
 - There is still a little more work to do in the serde module to add support for all of the operators and expressions
 required to support the benchmark queries (multiple issues).
 - The [User Guide](https://github.com/ballista-compute/ballista/tree/main/docs/user-guide) needs updating to reflect
