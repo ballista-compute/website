@@ -16,7 +16,8 @@ C++, and Java.
 
 Distributed query execution is now working well enough to support TPC-H queries 1, 3, 5, 6, 10, and 12 and the
 first 0.4.0 release is now available on Dockerhub, making it simple to try out Ballista locally by setting up a 
-standalone cluster or by using Docker Compose. See the [user guide](Ballista User Guide) for instructions.
+standalone cluster or by using Docker Compose. See the [Ballista User Guide](https://ballistacompute.org/docs) 
+for instructions.
 
 The full 0.4.0 release will be published once the 
 [remaining issues](https://github.com/ballista-compute/ballista/milestone/7) are resolved. 
