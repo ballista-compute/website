@@ -3,84 +3,37 @@ layout: page
 title: Benchmarks
 ---
 
-These benchmarks are for Ballista version `0.2.5`. This page will be updated periodically as the benchmarks are improved or when new releases of Ballista are available.
+_Coming Soon!_
 
-Benchmark specifications are [here](/benchmarks/nyctaxi) and hardware specifications are [here](/benchmarks/hardware). 
+These benchmark results show relative performance of Ballista on a single node versus DataFusion and 
+Apache Spark.
 
-# Local Mode Benchmarks
+The benchmarks are derived from TPC-H but are not official TPC benchmarks.
 
-These benchmarks test performance in a single docker container with constrained CPU and unconstrained memory. These figures are based on a single run in each case.
+| Query | Ballista   | DataFusion | Apache Spark |
+|-------|------------|------------|-----------------|
+|     1 | TBD | TBD | TBD |
+|     3 | TBD | TBD | TBD |
+|     5 | TBD | TBD | TBD |
+|     6 | TBD | TBD | TBD |
+|    10 | TBD | TBD | TBD |
+|    12 | TBD | TBD | TBD |
 
-## Query 1: Aggregate Query against NYC Taxi (CSV)  
+## Disclaimers & Analysis
 
-### Desktop (64 GB RAM)
+These are not apples-to-apples comparisons. DataFusion is a lightweight in-process in-memory query engine and 
+Ballista is a distributed query engine which currently always streams query stage results to disk for scalability, so 
+has a lot of overhead compared to DataFusion. If you can fit your data in memory you should use DataFusion instead of
+Ballista!
 
-This chart shows throughput in queries per minute, scaling with the number of CPU cores allocated.
+## Test Details
 
-![](https://raw.githubusercontent.com/ballista-compute/benchmarks/master/results/0.2.5/desktop/benchmarks-csv.svg)
+Tests are run against a Parquet data set at scale factor 100 (the original CSV data was ~100GB and the Parquet data 
+set is ~34GB). Each table has 8 partitions.
 
-This table provides the raw query execution times in seconds.
+## Hardware Specifications
 
-|Cores|Ballista Rust Executor|Apache Spark|
-|-----|---|---|
-|3|22.714|46.002|
-|6|11.517|30.616|
-|9|7.803|21.658|
-|12|5.486|17.714|
-
-### Laptop (16 GB RAM)
-
-This chart shows throughput in queries per minute, scaling with the number of CPU cores allocated.
-
-![](https://raw.githubusercontent.com/ballista-compute/benchmarks/master/results/0.2.5/laptop/benchmarks-csv.svg)
-
-This table provides the raw query execution times in seconds.
-
-|Cores|Ballista Rust Executor|Apache Spark|
-|-----|---|---|
-|3|140.888|47.558|
-|6|59.713|33.872|
-|9|15.405|29.796|
-|12|12.343|28.899|
-
-## Query 1: Aggregate Query against NYC Taxi (Parquet)  
-
-### Desktop (64 GB RAM)
-
-This chart shows throughput in queries per minute, scaling with the number of CPU cores allocated.
-
-![](https://raw.githubusercontent.com/ballista-compute/benchmarks/master/results/0.2.5/desktop/benchmarks-parquet.svg)
-
-This table provides the raw query execution times in seconds.
-
-|Cores|Ballista Rust Executor|Apache Spark|
-|-----|---|---|
-|3|9.36|5.824|
-|6|4.476|6.259|
-|9|3.043|8.869|
-|12|2.405|3.723|
-
-### Laptop (16 GB RAM)
-
-This chart shows throughput in queries per minute, scaling with the number of CPU cores allocated.
-
-![](https://raw.githubusercontent.com/ballista-compute/benchmarks/master/results/0.2.5/laptop/benchmarks-parquet.svg)
-
-This table provides the raw query execution times in seconds.
-
-|Cores|Ballista Rust Executor|Apache Spark|
-|-----|---|---|
-|3|30.896|8.732|
-|6|12.279|7.105|
-|9|2.779|3.829|
-|12|2.405|3.253|
-
-
-## Notes
-
-- The benchmarks are a work in progress
-- TODO: document the configurations used
-- TODO: document memory usage
-- TODO: run with parquet as well
-- Ballista has a very simple threading model where one thread is used per partition. Spark has a much more sophisticated threading model and work is shared between threads.
-
+- CPU: AMD Ryzen Threadripper 2970WX (24 physical cores, 48 virtual cores)
+- RAM: CORSAIR 64GB 16X4 D4 2666 VLPXC16
+- GPU: NVIDIA GeForce RTX 3080 Founders Edition
+- SSD: SAMSUNG E 1TB 970EVO+NVME M.2 SSD
