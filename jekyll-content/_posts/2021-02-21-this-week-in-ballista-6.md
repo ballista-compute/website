@@ -20,7 +20,7 @@ architecture is sound.
 
 This release supports running a cluster in standalone mode and also supports Kubernetes deployments.
 
-Please refer to the [release notes](2021-02-21-ballista-0.4.0.md) for more information about the functionality in 
+Please refer to the [release notes](/release/2021/02/20/ballista-0.4.0/) for more information about the functionality in 
 this release and some preliminary benchmarks comparing performance with Apache Spark. The results are mixed but some
 of the benchmark queries run with 2x the performance of Spark, which is promising.
 
