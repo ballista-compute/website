@@ -31,7 +31,7 @@ Ballista 0.4.1 is a patch release to fix a bug when running with multiple execut
 
 Andy Grove gave a presentation on Ballista and Apache Arrow at the 
 [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/). The 
-[video](bit.ly/3rapgVu) is now available online.
+[video](https://bit.ly/3rapgVu) is now available online.
 
 ## Help Wanted
 
